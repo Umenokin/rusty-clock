@@ -15,8 +15,6 @@ pub struct Props {
 
 #[function_component]
 pub fn Clock(props: &Props) -> Html {
-    println!("{}", props.time);
-
     let time = props.time.time();
 
     html! {
