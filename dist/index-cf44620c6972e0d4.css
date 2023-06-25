@@ -1,0 +1,100 @@
+.board {
+  width: 100vw;
+  height: 100vh;
+  gap: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url("images/background.png");
+}
+
+.clock {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -10px 15px 3px rgba(0, 0, 0, 0.4), 3px -3px 2px rgb(255, 255, 255);
+}
+.clock > .inner {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  position: relative;
+  background: #eee no-repeat url("images/clock-face.svg") center center;
+  background-size: calc(100% - 4px);
+  box-shadow: inset -10px 15px 3px rgba(0, 0, 0, 0.2), inset 3px -3px 2px rgb(255, 255, 255);
+}
+.clock > .hand {
+  position: absolute;
+  transform-origin: bottom;
+  bottom: 50%;
+  z-index: 200;
+}
+.clock > .main {
+  width: 0;
+  height: 27%;
+}
+.clock > .main::before {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  border-bottom: 15px solid #111;
+  left: -3px;
+  top: 0px;
+}
+.clock > .main:after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  border-top: 28px solid #111;
+}
+.clock > .hours {
+  transform: scaleY(0.9);
+}
+.clock > .minutes {
+  background: #111;
+  transform: scaleY(1.4);
+}
+.clock > .seconds {
+  width: 1%;
+  height: 39%;
+  background: #c00;
+}
+.clock > .point {
+  position: absolute;
+  width: 7%;
+  height: 7%;
+  border-radius: 50%;
+  background: #000;
+  z-index: 300;
+}
+
+.plate {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.5), 1px -1px rgb(255, 255, 255);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}

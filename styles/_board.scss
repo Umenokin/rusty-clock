@@ -1,0 +1,11 @@
+.board {
+  width: 100vw;
+  height: 100vh;
+  gap: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background: url("images/background.png");
+}
