@@ -6,6 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-yew = { version = "0.20.0", features = ["csr"] }
-chrono = "0.4.26"
-chrono-tz = "0.8.2"
+yew = { version = "0.20", features = ["csr"] }
+chrono = "0.4"
+chrono-tz = "0.8"
+# wasm-bindgen = { version = "0.2" }
+gloo = "0.8"
